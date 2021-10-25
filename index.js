@@ -14,6 +14,9 @@ mongoose
         console.log(err);
     });
 
+app.use(express.json());
+app.use("/api/users", userRoute); 
+
 app.listen(process.env.PORT, () => {
     console.log("Backend server is running on port 3005");
 });
