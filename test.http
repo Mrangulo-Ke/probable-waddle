@@ -1,0 +1,20 @@
+POST  http://localhost:3005/api/auth/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "alej",
+    "email": "alej@gmail.com",
+    "password": "patopato"
+}
+
+###
+
+POST  http://localhost:3005/api/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "alej",
+    "password": "patopato"
+}
+
+###
