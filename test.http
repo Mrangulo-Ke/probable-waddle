@@ -18,3 +18,12 @@ content-type: application/json
 }
 
 ###
+
+PUT  http://localhost:3005/api/users/61820d92cf33d909ae4150a0 HTTP/1.1
+content-type: application/json
+
+{
+    "username": "lal",
+}
+
+###
