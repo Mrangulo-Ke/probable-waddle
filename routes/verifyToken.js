@@ -30,7 +30,7 @@ const verifyTokenAndAdmin = (req,res, next) => {
     if (req.user.isAdmin){
         next();
     } else {
-        res.status(403).json("NO priviledges to that!"):
+        res.status(403).json("NO priviledges to that!");
     }   
     });
 };
@@ -39,4 +39,4 @@ module.exports = {
     verifyToken,
     verifyTokenAndAuthorization,
     verifyTokenAndAdmin
-}
+};
