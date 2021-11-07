@@ -2,9 +2,10 @@ POST  http://localhost:3005/api/auth/register HTTP/1.1
 content-type: application/json
 
 {
-    "username": "lala",
-    "email": "lal@gmail.com",
-    "password": "patopato"
+    "username": "admin",
+    "email": "admin@gmail.com",
+    "password": "patopato",
+    "isAdmin": "true"
 }
 
 ###
@@ -14,7 +15,7 @@ content-type: application/json
 
 {
     "username": "lala",
-    "password": "patopato"
+    "password": "patopato",
 }
 
 ###
