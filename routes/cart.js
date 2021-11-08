@@ -5,7 +5,7 @@ const { verifyToken, verifyTokenAndAuthorization, verifyTokenAndAdmin } = requir
 const router = require("express").Router();
 
 //CREATE
-router.post("/", verifyToken async (req, res) => {
+router.post("/", verifyToken, async (req, res) => {
     const newCart = new Cart(req,body);
     try {
         const savedCart = await newCart
@@ -41,11 +41,11 @@ router.delete("/:id", verifyTokenAndAuthorization, async (req, res) => {
     }
 })
 
-//GET
+//GET 
 router.get("/find/:userId", verifyTokenAndAuthorization, async (req, res) => {
     try {
-        const cart = await Cart.findOne(req.params.id);
-        res.status(200).json(cart);
+        const carts = await Cart.findOne(req.params.id);
+        res.status(200).json(carts);
     } catch (errr) {
         res.status(500).json(err)        
     }
